@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+* {
+    background-color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+
+    list-style: none;
+    text-decoration: none;
+}
+
+.header {
+    background-color: #282C2F;
+    display: flex;
+    align-items: center;
+    
+    border-style: none none solid none;
+    border-color: white;
+}
+
+.header p {
+    color: white;
+    background-color: #282C2F;
+
+    margin:10px auto;
+
+    font-size: 22px;
+}
+
+.menu {
+    background-color: red;
+}
+
+.menu ul {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #282C2F;
+}
+
+.menu ul li{
+    padding: 10px;
+    background-color: #282C2F;
+}
+
+.menu ul li a {
+    color: white;
+    padding: 10%;
+    background-color:#282C2F;
+}
+
+.menu ul li a:hover {
+    background-color: #2A526A;
+}

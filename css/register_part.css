@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+* {
+    background-color: whitesmoke;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+
+}
+
+/* HEADER */
+p {
+    text-align: center;
+    font-size: 32px;
+    color: whitesmoke;
+    background-color: #282C2F;
+    width: 70%;
+
+    margin: auto;
+    padding: 0.74em;
+}
+
+/* FORM */
+
+.register_container {
+    padding: 1em;
+    margin-top: 1%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: 60px;
+    gap: 0.8em;
+    width: 70%;
+    background-color: #31373b;
+}
+
+.register_container div:nth-child(even) {
+    background-color: #31373b;
+    display: flex;
+    align-items: center;
+}
+
+.register_container div:nth-child(odd) {
+    background-color: #31373b;
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+}
+
+.register_container label{
+    color: white;
+    background-color: #31373b;
+}
+
+.register_container input {
+    width: 70%;
+    border-radius: 0.2em;
+}
+
+/* BUTTONS */
+
+.inside_buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 0.8em;
+    justify-content: center;
+    width: 71%;
+}
+
+.inside_buttons .register_button {
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: #31373b;
+    border-width: 1px;
+    border-color: white;
+}
+
+.inside_buttons .register_button:hover {
+    background-color: #2A526A;
+}
+
+.inside_buttons .cancel_button {
+    text-align: center;
+    width: 100%;
+    border-radius: 0.2em;
+    text-decoration: none;
+    color: white;
+    background-color: #31373b;
+    border: 1px solid white;
+}
+
+.inside_buttons .cancel_button:hover {
+    background-color: #2A526A;
+}
+
+.error{
+    color: red;
+}
+

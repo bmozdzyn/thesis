@@ -1,0 +1,35 @@
+.people_title {
+  text-align: center;
+  font-size: 24px;
+  color: #282c2f;
+  margin: 1%;
+}
+
+.table {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.table th {
+  border: 1px solid black;
+  text-align: center;
+  background-color: #282c2f;
+  color: white;
+  padding: 1.5vw;
+  font-size: 18px;
+}
+
+.table td {
+  border: 1px solid black;
+  text-align: center;
+  background-color: #31373b;
+  color: white;
+  padding: 1.5vw;
+}
+
+/* --- DELETE BUTTON --- */
+.table td a {
+  text-decoration: none;
+  background-color: #31373b;
+  color: red;
+}

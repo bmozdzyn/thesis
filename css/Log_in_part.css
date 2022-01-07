@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+* {
+    background-color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 22px;
+
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.login_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+
+    position: absolute;
+    left: 50%;
+    top:50%;
+    width: 700px;
+    height: 400px;
+    margin-left: -350px;
+    margin-top: -200px;
+}
+
+.login_text_div {
+    background-color: white;
+    padding: 1%;
+    padding-left: 2%;
+    height: 300px;
+    width: 350px;
+
+    text-align: left;
+}
+
+.login_text_div p{
+   color: #282C2F;
+}
+
+.login_text_div a{ 
+    vertical-align: bottom;
+    text-decoration: none;
+}
+
+.username_password_field {
+    background-color: #282C2F;
+    color: white;
+    padding: 1%;
+    height: 350px;
+    width: 350px;
+
+
+    position: relative;
+    text-align: center;
+
+}
+
+.jojo123 {
+    background-color: #282C2F;
+    top: 50%;
+    transform: translateY(25%);
+
+}
+
+.username_password_field input {
+    border-color: white;
+    border-radius: 0.2em;
+    border-width: 1px;
+    background-color: whitesmoke;
+}
+
+.username_password_field input[type=submit]{
+    background-color: #282C2F;
+    color: white;
+}
+
+.username_password_field input[type=submit]:hover {
+    background-color: #2A526A;
+}
+
+

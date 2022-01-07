@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+* {
+    background-color: whitesmoke;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+}
+
+.vehicle_title {
+    text-align: center;
+    font-size: 24px;
+    color: #282C2F;
+    margin: 1%;
+}
+
+.middle_section{
+    margin-top: 0px;
+    display: flex;
+}
+
+.main_content{
+    margin: auto;
+    margin-top: 1%;
+}
+
+.table{
+    width: 100%;
+    border: 1px solid black;
+}
+
+.table th {
+    border: 1px solid black;
+    text-align: center;
+    background-color: #282C2F;
+    color: white;
+    padding: 1.5vw;
+    font-size: 18px;
+}
+
+.table td{
+    border: 1px solid black;
+    text-align: center;
+    background-color: #31373b;
+    color: white;
+    padding: 1.5vw;
+}
+
+/* --- DELETE BUTTON --- */
+.table td a{
+    text-decoration: none;
+    background-color: #31373b;
+    color: red;
+}
+
+/* ----- ADDING VEHICLE ----- */
+
+.adding_vehicle {
+    text-align: center;
+    font-size: 24px;
+    color: #282C2F;
+    margin: 1%;
+}
+
+.adding_vehicle_container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: 60px;
+    gap: 0.8em;
+    width: 70%;
+    background-color: #31373b;
+}
+
+.adding_vehicle_container div:nth-child(even) {
+    background-color: #31373b;
+    display: flex;
+    align-items: center;
+}
+
+.adding_vehicle_container div:nth-child(odd) {
+    background-color: #31373b;
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+}
+
+.adding_vehicle_container label{
+    color: white;
+    background-color: #31373b;
+    font-size: 20px;
+}
+
+.adding_vehicle_container input {
+    width: 70%;
+    border-radius: 0.2em;
+    font-size: 20px;
+}
+
+.submit_button{
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: #31373b;
+    border-width: 1px;
+    border-color: white;
+}
+
+
+/* ----- DELETING VEHICLE ----- */
+.deleting_vehicle {
+    text-align: center;
+    font-size: 24px;
+    color: #282C2F;
+    margin: 1%;
+}
+
+
+.error {
+    color: red;
+    visibility: hidden;
+}

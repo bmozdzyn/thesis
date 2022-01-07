@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Source Sans Pro", sans-serif;
+  /* font-size: 18px; */
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+/* HEADER - includes do not work*/
+.header {
+  background-color: #282c2f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 1%; /*top, bottom - 30px, right, left - 10% */
+  font-size: 18px;
+}
+
+/* LOGO */
+.logo {
+  height: 40px;
+}
+
+/* NAVIGATION MENU */
+.nav_menu {
+  list-style: none;
+}
+
+.nav_menu li {
+  display: inline-block; /*Displaying in horizontal line*/
+  padding: 0px 10px; /*top, bottom = 0px, left, right = 20px */
+}
+
+.nav_menu li a {
+  padding: 10px;
+  border-radius: 0.1em;
+}
+
+/* While mouse is on it*/
+.nav_menu li a:hover {
+  background-color: #2a526a;
+}
+
+/* Log in/log out button */
+.login_button {
+  padding: 10px;
+  cursor: pointer;
+
+  border-color: whitesmoke;
+  border-radius: 0.2em;
+  border-width: 1px;
+
+  background-color: #282c2f;
+}
+
+.login_button:hover {
+  background-color: #2a526a;
+}
+
+/* MAIN SECTION */
+main {
+  margin: 1% 5%;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  border-radius: 0.2em;
+}
+
+.booking_dates {
+  display: flex;
+  flex-direction: column;
+  margin: 2% auto 1% auto;
+  width: 60vw;
+  background-color: #282c2f;
+  border-radius: 0.2em;
+}
+
+.booking_dates div {
+  margin: 2% auto;
+}
+
+.booking_dates div input {
+  background-color: #2a526a;
+  /* margin: 0 0 1% 1%; */
+}
+
+.additional_customer_inf {
+  display: flex;
+  flex-direction: column;
+  margin: 1% auto;
+  width: 60vw;
+  background-color: #282c2f;
+  border-radius: 0.2em;
+}
+
+.additional_customer_inf p {
+  font-size: 24px;
+  margin: 2% auto;
+}
+
+.additional_customer_inf div {
+  margin: 2% auto;
+}
+
+.additional_customer_inf div input {
+  background-color: #2a526a;
+}
+
+.book_button_div {
+ /*  margin-right: 2% auto; */
+ display: flex;
+ 
+}
+
+.book_button {
+  padding: 10px;
+  margin: 1% auto;
+  cursor: pointer;
+
+  border-color: whitesmoke;
+  border-radius: 0.2em;
+  border-width: 1px;
+  font-size: 20px;
+
+  background-color: #282c2f;
+}
+
+.book_button:hover {
+  background-color: #2a526a;
+}
+
+/* FOOTER - includes do not work*/
+.footer {
+  background-color: #282c2f;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.footer div {
+  margin: 2%;
+  text-align: center;
+}
+
+/* ERRORS */
+.error {
+  color: red;
+  font-size: 16px;
+}
