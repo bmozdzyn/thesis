@@ -32,7 +32,7 @@
 
 .nav_menu li {
   display: inline-block; /*Displaying in horizontal line*/
-  padding: 0px 10px; /*top, bottom = 0px, left, right = 20px */
+  padding: 0px 10px; /*top, bottom = 0px, left, right = 10px */
 }
 
 .nav_menu li a {
@@ -59,4 +59,32 @@
 
 .login_button:hover {
   background-color: #2a526a;
+}
+
+/* HAMBURGER */
+.hamburger {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+/* ----- RESPONSIVNESS ----- */
+@media screen and (max-width: 600px) {
+  /* HEADER */
+  /* hambuerger menu */
+  .nav_menu {
+    display: none;
+    background-origin: red;
+  }
+  .login_button {
+    border: none;
+    padding: 0;
+  }
 }

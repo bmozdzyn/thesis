@@ -66,26 +66,24 @@
                 }
             ?>
 
+            <!-- Log in button directing to log in page/ Log out button -->
+            <?php
+                if(isset($_SESSION['logged_in']))
+                {
+                    echo '<li><form action="Logout.php" method="POST" >
+                    <button type="submit" class="login_button">SIGN OUT
+                </form></li>';
+                }   
+                else
+                {
+                    echo '<li><form action="Log_in_part.php" method="POST" >
+                    <button type="submit" class="login_button">LOG IN/SIGN IN
+                </form></li>';
+                }
+            ?> 
+
         </ul>
     </nav>
-
-    <!-- Log in button directing to log in page/ Log out button -->
-        <?php
-            if(isset($_SESSION['logged_in']))
-            {
-                echo '<form action="Logout.php" method="POST" >
-                <button type="submit" class="login_button">SIGN OUT
-            </form>';
-            }   
-            else
-            {
-                echo '<form action="Log_in_part.php" method="POST" >
-                <button type="submit" class="login_button">LOG IN/SIGN IN
-            </form>';
-            }
-        ?> 
-
-
 
 </header>
 

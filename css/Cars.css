@@ -69,7 +69,6 @@ header {
 .main_section {
   display: flex;
   flex-direction: column;
-  gap: 25px;
 }
 
 /* @media (max-width: 1200px) {

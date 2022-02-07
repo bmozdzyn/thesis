@@ -157,3 +157,48 @@ footer div {
   margin: 2%;
   text-align: center;
 }
+
+/* ----- RESPONSIVNESS ----- */
+@media screen and (max-width: 700px) {
+  /* HEADER */
+  /* hambuerger menu */
+ /*  .nav_menu {
+    display: none;
+    background-color: red;
+  }
+
+  .login_button {
+    border: none;
+    padding: 0;
+  } */
+
+  .mid_section_text {
+    top:25%;
+  }
+
+  .type_choice {
+    margin-top: -200px;
+    transform: scale(0.85);
+  }
+
+  /* .type_choice li{
+    transform: scale(0.8);
+    background-color: tomato;
+  } */
+}
+
+@media screen and (max-width: 500px) {
+  .mid_section_text {
+    top:20%;
+  }
+
+  .type_choice {
+    margin-top: -200px;
+    margin-bottom: -100px;
+    transform: scale(0.80);
+  }
+
+  .type_choice li {
+    transform: scale(0.8);
+  }
+}

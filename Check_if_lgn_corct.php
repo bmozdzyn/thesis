@@ -53,7 +53,6 @@
         //getting them from Log_in_part.php POST method
         $login  = $_POST['login'];
         $password = $_POST['password'];
-        
         //
         $login = htmlentities($login, ENT_QUOTES, "UTF-8");
         $password = htmlentities($password, ENT_QUOTES, "UTF-8");

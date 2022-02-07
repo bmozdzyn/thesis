@@ -28,9 +28,29 @@
     {
         //getting user's ID
         $current_user_id = $_SESSION['Actual_user_ID'];
-
-        //current bookings for logged user
-        $result = $connection->query("SELECT * FROM rental details WHERE Customer_ID=$current_user_id");
+        
+        //getting customer id
+        $result_33 = $connection->query("SELECT Customer_ID FROM customer WHERE People_ID=$current_user_id");
+        while($rows_4 = $result_33->fetch_assoc()) {
+        $customer_ID = $rows_4['Customer_ID'];
+        }
+        
+        //if customer does not have any bookings other queries are not invoked
+        if($customer_ID != NULL)
+        {
+            
+            //current bookings for logged user
+            $result_1 = $connection->query("SELECT * FROM rental_details WHERE Customer_ID=$customer_ID");
+    
+            //getting vehicle id
+            $result_22 = $connection->query("SELECT Vehicle_ID FROM rental_details WHERE Customer_ID = $customer_ID");
+            while($rows_3 = $result_22->fetch_assoc()){
+                $vehicle_ID = $rows_3['Vehicle_ID'];
+            }
+    
+            //getting brand
+            $result_2 = $connection->query("SELECT Brand FROM vehicle WHERE Vehicle_ID = $vehicle_ID");
+        }
     }
 
 ?>
@@ -63,10 +83,14 @@
         <div class="main_content">
             <p class="title">Your bookings</p>
 
+        <?php
+            echo($current_user_id);
+        ?>
+
             <!-- Displaying user's booking data -->
             <table class="table">
                 <tr>
-                    <th>Model</th>
+                    <th>Brand</th>
                     <th>Days hired</th>
                     <th>Initial date</th>
                     <th>Return date</th>
@@ -76,19 +100,28 @@
 
                 <!-- Fetching data from rows -->
                 <?php
-                    while($rows = $result->fetch_assoc())
+                if(!empty($result_1))
+                {
+                    while($rows_1 = $result_1->fetch_assoc())
                     {
+
+                        while($rows_2 = $result_2->fetch_assoc())
+                        {
                 ?>
                 <tr>
-                    <td><?php echo $rows['Model'];?></td>
-                    <td><?php echo $rows['Hire_Days'];?></td>
-                    <td><?php echo $rows['Hire_Date'];?></td>
-                    <td><?php echo $rows['Return_date'];?></td>
-                    <td><?php echo $rows['Total_cost'];?></td>
-                    <?php echo "<td><a href='Delete.php?id=".$rows['Rental_ID']."'>Delete</a></td>";?>
+                    <td><?php echo $rows_2['Brand'];?></td>
+                    <td><?php echo $rows_1['Hire_days'];?></td>
+                    <td><?php echo $rows_1['Hire_Date'];?></td>
+                    <td><?php echo $rows_1['Return_date'];?></td>
+                    <td><?php echo $rows_1['Total_cost'];?></td>
+                    <?php echo "<td><a href='User_return.php?id=".$rows_1['Rental_ID']."'>Return vehicle</a></td>";?>
                 </tr>
                 <?php
+                        }
                     }
+                }
+                else echo "<p class='no_bookings'>You have no bookings</p>";
+
                 ?>
 
             </table>

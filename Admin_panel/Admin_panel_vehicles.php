@@ -17,7 +17,6 @@
     //connection with database
     $connection = mysqli_connect($host, $db_user, $db_password, $db_name);
 
-
     //checking if conecction is valid
     if($connection->connect_errno != 0)
     {
@@ -87,8 +86,8 @@
     //FILE
     if(isset($_FILES['file']['name']))
     {
-        //$target_file = basename($_FILES['file']['name']);
-        $target_file = $target_dir.basename($_FILES['file']['name']);
+        $target_file = basename($_FILES['file']['name']);
+        //$target_file = $target_dir.basename($_FILES['file']['name']);
     }
     else
         $target_file = null;
@@ -264,6 +263,7 @@
                     <th>Current mileage</th>
                     <th>Cost per day</th>
                     <th>Delete</th>
+                    <th>Update</th>
                 </tr>
                 
                 <!-- Fetching data from rows -->
@@ -284,6 +284,7 @@
                     <td><?php echo $rows['Current_mileage'];?></td>
                     <td><?php echo $rows['Cost_per_day'];?></td>
                     <?php echo "<td><a href='Delete.php?id=".$rows['Vehicle_ID']."'>Delete</a></td>";?>
+                    <?php echo "<td><a href='Update.php?id=".$rows['Vehicle_ID']."'>Update</a></td>";?>
                 </tr>
                 <?php
                     }

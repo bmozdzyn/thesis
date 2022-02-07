@@ -1,5 +1,4 @@
 <?php
-
     session_start();
 
     //checking if submit is clicked
@@ -14,11 +13,8 @@
         //setting flag, validation correct
         $is_correct=true;
 
-
-
         //regular expressions - for polish characters
         $regularExpression = "/^[a-zA-ZąęćżźńłóśĄĆĘŁŃÓŚŹŻ\s]+$/";
-
 
         //   CHECKING USERNAME   //
         $username = $_POST['username'];
@@ -39,8 +35,6 @@
         }
 
 
-
-
         //   CHECKING EMAIL ADDRESS   //
         $email = $_POST['email'];
 
@@ -53,7 +47,6 @@
             $is_correct = false;
             $_SESSION['e_email'] = "E-mail address is incorrect";
         }
-
 
 
 
@@ -92,7 +85,7 @@
         {
             $is_correct = false;
             //setting error
-            $_SESSION['e_first_name'] = "First name should consist of letters and numbers only";
+            $_SESSION['e_first_name'] = "First name should consist of letters only";
         }
 
         

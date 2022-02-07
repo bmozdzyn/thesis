@@ -3,6 +3,13 @@ $id = $_GET['id'];
 
 session_start();
 
+   /*  //If users is not allowed to see some sites
+    if (isset($_SESSION['logged_in']) && ($_SESSION['logged_in'] == true))
+    {
+        header('Location: Main_site.php');
+        exit();
+    } */
+
     //including connect.php file
     require_once "../Connect.php";
 

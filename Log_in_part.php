@@ -29,8 +29,16 @@ method="post" - sending data to a server to create/update resorce-->
                             Username: <br /> <input type="text" name="login"> <br /> <br /> 
                             Password: <br /> <input type="password" name="password"> <br /> <br />  
                                 
+                                <?php
+                                    //Displaying error only if error exists in check_if_lgn_correct.php
+                                    if(isset($_SESSION['error']))
+                                    {
+                                        echo $_SESSION['error'];
+                                    }
+                                ?>
                             
                             <br /> <input type="submit" value="Log in" class="login_button"> 
+            
                          </div>
 
                     </div>
@@ -39,13 +47,6 @@ method="post" - sending data to a server to create/update resorce-->
             </form>
 
             
-            <?php
-                //Displaying error only if error exists in check_if_lgn_correct.php
-                if(isset($_SESSION['error']))
-                {
-                    echo $_SESSION['error'];
-                }
-            ?>
     
     </body>
     

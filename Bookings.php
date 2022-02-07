@@ -492,6 +492,11 @@ if (isset($_POST['insurance_id']))
         <div class="booking_dates">
             <div class="">
                 <p>If you rent for more than 3 days you get 20% discount</p>
+
+                <?php
+                    echo $db_hire_date;
+                ?>
+
             </div>
 
             <div class="pick_up_date_div">
